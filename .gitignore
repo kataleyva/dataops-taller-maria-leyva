@@ -5,9 +5,6 @@ env/
 # Datos (se versionan con DVC, no con Git)
 *.csv
 *.db
-data/*
-!data/*.dvc
-!data/.gitignore
 
 # Modelos generados
 models/*.pkl
