@@ -29,7 +29,7 @@ def generar_registros():
         fecha = inicio + timedelta(days=random.randint(0,364))
         categoria = random.choice(list(productos.keys()))
         producto, precio_unitario = random.choice(productos[categoria])
-        cantidad = random.randint(1, 10)
+        cantidad = cantidad = random.randint(fecha.month // 3 + 1, fecha.month // 2 + 3)
         cliente_id = random.randint(1, 50)
         registros.append([fecha.isoformat(), producto, categoria, cantidad, precio_unitario, cliente_id])
 
