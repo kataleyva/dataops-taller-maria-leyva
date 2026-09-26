@@ -9,7 +9,7 @@ from src.utils import save_to_csv
 
 root = Path(__file__).resolve().parent.parent
 db_path = root / "data" / "ventas.db"
-csv_path = root / "data" / "agreggated_sales.csv"
+csv_path = root / "data" / "aggregated_sales.csv"
 model_path = root / "models" / "model.pkl"
 
 
