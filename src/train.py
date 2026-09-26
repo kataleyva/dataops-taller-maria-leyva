@@ -12,9 +12,10 @@ db_path = root / "data" / "ventas.db"
 csv_path = root / "data" / "agreggated_sales.csv"
 model_path = root / "models" / "model.pkl"
 
-def train_model(df, model_path = model_path):
-    #Entrenamiento de regresión de ventas por mes
-    ventas_mes = df.groupby("mes", as_index = False)["venta_total"].sum()
+
+def train_model(df, model_path=model_path):
+    # Entrenamiento de regresión de ventas por mes
+    ventas_mes = df.groupby("mes", as_index=False)["venta_total"].sum()
     features = ventas_mes[["mes"]]
     target = ventas_mes["venta_total"]
 
@@ -26,6 +27,7 @@ def train_model(df, model_path = model_path):
     model_path.parent.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, model_path)
     return model, r2
+
 
 def run_pipeline():
     # Ejecución del pipeline

@@ -1,5 +1,6 @@
 from pathlib import Path
 
+
 def save_to_csv(df, path):
     # Guarda dtatframe en un csv
     path = Path(path)
