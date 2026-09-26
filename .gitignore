@@ -1,0 +1,23 @@
+# Entornos virtuales
+venv/
+env/
+
+# Datos (se versionan con DVC, no con Git)
+*.csv
+*.db
+data/*
+!data/*.dvc
+!data/.gitignore
+
+# Modelos generados
+models/*.pkl
+
+# Configuración sensible
+.env
+
+# Notebooks y Python
+.ipynb_checkpoints/
+__pycache__/
+.pytest_cache/
+.coverage
+coverage.xml
